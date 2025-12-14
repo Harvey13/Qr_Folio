@@ -10,7 +10,6 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Portfolio Links - Book Application",
   description: "Une collection de liens avec QR codes pour un partage facile",
-  generator: "v0.app",
   icons: {
     icon: [
       {
