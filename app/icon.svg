@@ -1,8 +1,7 @@
-<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <title>QR Links Folio Icon</title>
-
-  <style>
-    .bg { fill: #f4f4f5; }
+<?xml version="1.0"?>
+<svg width="180" height="180" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <title>QR Links Folio Icon</title>
+ <style>.bg { fill: #f4f4f5; }
     .fg { fill: #18181b; }
     .accent { fill: #6366f1; }
 
@@ -10,30 +9,27 @@
       .bg { fill: #18181b; }
       .fg { fill: #fafafa; }
       .accent { fill: #818cf8; }
-    }
-  </style>
-
-  <!-- Background -->
-  <rect width="180" height="180" rx="42" class="bg"/>
-
-  <!-- QR symbol (agrandi) -->
-  <g transform="translate(30 30) scale(3.4)">
-    <!-- Top-left -->
-    <rect x="0" y="0" width="8" height="8" rx="1.2" class="fg"/>
-    <rect x="2" y="2" width="4" height="4" rx="0.8" class="bg"/>
-
-    <!-- Top-right -->
-    <rect x="12" y="0" width="8" height="8" rx="1.2" class="fg"/>
-    <rect x="14" y="2" width="4" height="4" rx="0.8" class="bg"/>
-
-    <!-- Bottom-left -->
-    <rect x="0" y="12" width="8" height="8" rx="1.2" class="fg"/>
-    <rect x="2" y="14" width="4" height="4" rx="0.8" class="bg"/>
-
-    <!-- Accent pixels -->
-    <rect x="12" y="12" width="2" height="2" rx="0.4" class="accent"/>
-    <rect x="16" y="12" width="2" height="2" rx="0.4" class="fg"/>
-    <rect x="12" y="16" width="2" height="2" rx="0.4" class="fg"/>
-    <rect x="16" y="16" width="2" height="2" rx="0.4" class="accent"/>
+    }</style>
+ <!-- Background -->
+ <!-- QR symbol (agrandi) -->
+ <g class="layer">
+  <title>Layer 1</title>
+  <rect class="bg" height="180" id="svg_1" rx="42" width="180"/>
+  <g id="svg_2" transform="matrix(1 0 0 1 0 0) translate(29 29) scale(1.8 1.8) translate(-29 -29) translate(30 30) matrix(3.4 0 0 3.4 0 0)">
+   <!-- Top-left -->
+   <rect class="fg" height="8" id="svg_3" rx="1.2" width="8" x="0" y="0"/>
+   <rect class="bg" height="4" id="svg_4" rx="0.8" width="4" x="2" y="2"/>
+   <!-- Top-right -->
+   <rect class="fg" height="8" id="svg_5" rx="1.2" width="8" x="12" y="0"/>
+   <rect class="bg" height="4" id="svg_6" rx="0.8" width="4" x="14" y="2"/>
+   <!-- Bottom-left -->
+   <rect class="fg" height="8" id="svg_7" rx="1.2" width="8" x="0" y="12"/>
+   <rect class="bg" height="4" id="svg_8" rx="0.8" width="4" x="2" y="14"/>
+   <!-- Accent pixels -->
+   <rect class="accent" height="2" id="svg_9" rx="0.4" width="2" x="12" y="12"/>
+   <rect class="fg" height="2" id="svg_10" rx="0.4" width="2" x="16" y="12"/>
+   <rect class="fg" height="2" id="svg_11" rx="0.4" width="2" x="12" y="16"/>
+   <rect class="accent" height="2" id="svg_12" rx="0.4" width="2" x="16" y="16"/>
   </g>
+ </g>
 </svg>
