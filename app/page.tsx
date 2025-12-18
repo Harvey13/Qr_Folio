@@ -8,6 +8,7 @@ import { QRCodeDisplay } from "@/components/qr-code-display"
 interface Link {
   url: string
   title: string
+  icon?: string
 }
 
 export default function LinkBookPage() {
@@ -115,10 +116,23 @@ export default function LinkBookPage() {
                     key={index}
                     className="w-full flex-shrink-0 flex flex-col items-center gap-8 text-center"
                   >
-                    {/* Title */}
-                    <div className="space-y-2">
-                      <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">{link.title}</h2>
-                      <p className="text-muted-foreground text-sm">Scannez le QR code ou visitez le lien</p>
+                    {/* Icon and Title */}
+                    <div className="space-y-4">
+                      {link.icon && (
+                        <div className="flex justify-center">
+                          <img 
+                            src={link.icon} 
+                            alt={`${link.title} icon`} 
+                            className="w-16 h-16 md:w-20 md:h-20 rounded-lg object-cover"
+                            onError={(e) => {
+                              e.currentTarget.style.display = 'none';
+                            }}
+                          />
+                        </div>
+                      )}
+                      <div className="space-y-2">
+                        <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">{link.title}</h2>
+                      </div>
                     </div>
 
                     {/* QR Code */}

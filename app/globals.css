@@ -122,3 +122,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Masquer l'indicateur Next.js DevTools */
+#devtools-indicator,
+.nextjs-toast {
+  display: none !important;
+}
