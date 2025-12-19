@@ -11,5 +11,6 @@
   { "url": "https://sunny-alpaca-2b726e.netlify.app/", "title": "Sunny Alpaca" },
   { "url": "https://lustrous-bubblegum-41dcad.netlify.app/", "title": "Lustrous Bubblegum" },
   { "url": "https://polite-lamington-0c017a.netlify.app/", "title": "Polite Lamington" },
-  { "url": "https://felixpetanque1.netlify.app/", "title": "Felix Petanque" }
+  { "url": "https://felixpetanque1.netlify.app/", "title": "Felix Petanque" },
+  { "url": "https://listepresents.netlify.app/", "title": "Liste Présence", "icon": "/app-icons/attendee.ico" }
 ]
