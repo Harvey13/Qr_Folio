@@ -4,7 +4,7 @@
   { "url": "https://pignadasynchro.netlify.app/", "title": "Pignada Synchro", "icon": "/app-icons/tirage admin.png" },
   { "url": "https://pignadatrombi.netlify.app/", "title": "Pignada Trombi",  "icon": "/app-icons/logo512.ico" },
   { "url": "https://qrsimplegenerator.netlify.app/", "title": "QR Simple Generator", "icon": "/app-icons/qr_generator.ico" },
-  { "url": "https://qrlinksfolio.netlify.app/", "title": "QR Links Folio" },
+  { "url": "https://qrlinksfolio.netlify.app/", "title": "QR Links Folio" , "icon": "/app-icons/qr_link.ico" },
   { "url": "https://connectmefast.netlify.app/", "title": "Connect Me Fast", "icon": "/app-icons/connect-me-fast.ico" },
   { "url": "https://sortierando.netlify.app/", "title": "Sortie Rando" },
   { "url": "https://whitebalance.netlify.app/", "title": "White Balance", "icon": "/app-icons/auto-color.png" },
