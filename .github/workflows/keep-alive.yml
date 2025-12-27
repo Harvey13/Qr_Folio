@@ -1,0 +1,48 @@
+name: Keep Apps Alive (with alert)
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # Tous les jours à 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  ping-apps:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Ping all URLs from links.json
+        id: ping
+        run: |
+          failed_urls=()
+
+          urls=$(jq -r '.[].url' public/links.json)
+
+          for url in $urls; do
+            echo "🔄 Pinging $url"
+            if ! curl -L --max-time 20 --silent --fail "$url"; then
+              echo "❌ FAILED: $url"
+              failed_urls+=("$url")
+            else
+              echo "✅ OK: $url"
+            fi
+          done
+
+          if [ ${#failed_urls[@]} -gt 0 ]; then
+            echo "FAILED_URLS<<EOF" >> $GITHUB_ENV
+            printf '%s\n' "${failed_urls[@]}" >> $GITHUB_ENV
+            echo "EOF" >> $GITHUB_ENV
+            exit 1
+          fi
+
+      - name: Create GitHub Issue if apps are down
+        if: failure()
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "🚨 App(s) indisponible(s) – Keep Alive"
+          content-filepath: .github/keep-alive-alert.md
